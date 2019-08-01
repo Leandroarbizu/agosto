@@ -16,6 +16,7 @@ public class bicicleteria {
     private float ganancia;
     private int cantidadDeVentas;
     private ArrayList<Bicicleta> bicicleta;
+    private ArrayList<Bicicleta> Bicicleta;
 
     public bicicleteria() {
         ArrayList<Object> bicicletas = new ArrayList<>();
@@ -39,16 +40,26 @@ public class bicicleteria {
 
         List <Bicicleta> ordenarBicis; 
       Bicicleta aux;
-            for (int j = 0; j < Bicicleta.size();j++) {
+      boolean bandera=true;
+            for (int j = 0; j < Bicicleta.size()&& bandera== ;j++) {
   
             for (int i = 0; i < Bicicleta.size(); i++) {
-                if (Bicicleta.get(i).getaño() > Bicicleta.get(i + 1).getaño()) {
-                    aux = Bicicleta.get(i + 1);
-                    Bicicleta.set(i + 1, Bicicleta.get(i))
-                    :
-            Bicicleta.set(i, aux);
+                bandera=false;
+            }
+                if (Bicicleta.get(i).getAño() > Bicicleta.get(i + 1).getAño()) {
+                    aux = (Bicicleta) Bicicleta.get(i + 1);
+                    Bicicleta.set(i + 1, Bicicleta.get(i));
+                    Bicicleta.set(i, aux);
                 }
                 }
                 }
 return Bicicleta;
+    }
+    void mostrarTodo(){
+        for (int i=0;Bicicleta.size();i++){
+            
+        }
+        System.out.println(bicicleta.get(i).toString());
+        
+    }
 

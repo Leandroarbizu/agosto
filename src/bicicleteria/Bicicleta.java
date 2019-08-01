@@ -16,6 +16,8 @@ public class Bicicleta {
    private String nroDeSerie;
    private String modelo; 
    private int año;
+   private float precio;
+   
 
     public String getNroDeSerie() {
         return nroDeSerie;
@@ -48,7 +50,12 @@ public class Bicicleta {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-   private float precio;
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" + "nroDeSerie=" + nroDeSerie + ", modelo=" + modelo + ", a\u00f1o=" + año + ", precio=" + precio + '}';
+    }
+
 
    
     
